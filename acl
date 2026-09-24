@@ -1,0 +1,32 @@
+logout
+[root@localhost rocky_server]# cd shared_dir/
+[root@localhost shared_dir]# ls -l 
+total 0
+-rw-rw-r--+ 1 root root 0 Sep 24 13:26 main.py
+-rw-rw-r--+ 1 punk root 0 Sep 24 14:16 punk_touch.py
+-rw-rw-r--+ 1 punk punk 0 Sep 24 13:44 punk.txt
+[root@localhost shared_dir]# su - alice
+[alice@localhost ~]$ cd /home/rocky_server/shared_dir 
+-bash: cd: /home/rocky_server/shared_dir: Permission denied
+[alice@localhost ~]$ ls
+[alice@localhost ~]$ id alice
+uid=1003(alice) gid=1005(alice) groups=1005(alice)
+[alice@localhost ~]$ exit
+logout
+[root@localhost shared_dir]# usermod -aG developer alice 
+[root@localhost shared_dir]# su - alice
+Last login: Thu Sep 24 14:18:33 IST 2026 on pts/1
+[alice@localhost ~]$ cd /home/rocky_server/shared_dir/
+[alice@localhost shared_dir]$ ls
+main.py  punk_touch.py  punk.txt
+[alice@localhost shared_dir]$ touch alice.py
+[alice@localhost shared_dir]$ rm punk_touch.py 
+rm: cannot remove 'punk_touch.py': Operation not permitted
+[alice@localhost shared_dir]$ exit
+logout
+[root@localhost shared_dir]# ls -l
+total 0
+-rw-rw-r--+ 1 alice root 0 Sep 24 14:20 alice.py
+-rw-rw-r--+ 1 root  root 0 Sep 24 13:26 main.py
+-rw-rw-r--+ 1 punk  root 0 Sep 24 14:16 punk_touch.py
+-rw-rw-r--+ 1 punk  punk 0 Sep 24 13:44 punk.txt
