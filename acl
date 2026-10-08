@@ -1,5 +1,5 @@
 logout
-[root@localhost rocky_server]# cd shared_dir/
+[root@localhost rocky_server]# 
 [root@localhost shared_dir]# ls -l 
 total 0
 -rw-rw-r--+ 1 root root 0 Sep 24 13:26 main.py
