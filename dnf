@@ -1,1 +1,1 @@
-
+dnf check # will check all corrrupt / duplicate packages
