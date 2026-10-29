@@ -1,0 +1,8 @@
+systemctl status crond # check status active/inactive/disabled
+systemctl start crond # start crond
+systemctl enable crond # auto run on boot
+systemctl restart crond # if any changes happend, it will update 
+systemctl enable --now nginx # will enable and start using one command
+systemctl disable --now crond # will disable and stop using one command 
+systemctl is-enable nginx # this will check, service is enabled
+
