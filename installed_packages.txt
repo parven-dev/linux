@@ -502,7 +502,7 @@ linux-modules-6.8.0-124-generic			deinstall
 linux-modules-6.8.0-136-generic			deinstall
 linux-modules-6.8.0-137-generic			deinstall
 linux-modules-6.8.0-138-generic			deinstall
-linux-modules-6.8.0-139-generic			install
+linux-modules-6.8.0-139-generic			install 
 linux-modules-6.8.0-142-generic			install
 linux-modules-6.8.0-147-generic			install
 linux-modules-6.8.0-90-generic			deinstall
