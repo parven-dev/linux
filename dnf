@@ -1,1 +1,2 @@
 dnf check # will check all corrrupt / duplicate packages
+dnf info # this will show package details
